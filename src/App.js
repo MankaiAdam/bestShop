@@ -37,6 +37,7 @@ function App() {
               </Routes>
             </div>
         </AuthProvider>
+        <Footer/>
         </header>
        
       </div>

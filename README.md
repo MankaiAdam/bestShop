@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+# 🛍️ BestShop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**BestShop** is a web application that aggregates product listings from multiple Tunisian online stores in one place. It allows users to **compare prices**, **track availability**, and **make informed purchasing decisions**—making online shopping in Tunisia easier and more transparent.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🔎 **Search products** by name or characteristics
+- 💸 **Compare prices** from different shops
+- 📊 **Track price history** for each product
+- 🧠 **Smart filters** based on characteristics (e.g., RAM, storage, screen size)
+- ❤️ **Wishlist** and 🛒 **Cart** support
+- 👤 User authentication and session management
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ⚙️ Technologies Used
 
-### `npm test`
+### Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React.js** — modern SPA with reusable components
+- **CSS Modules** — scoped and maintainable styling
+- **SVG Assets** — for clean UI icons
 
-### `npm run build`
+### Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **PHP** — handles business logic and API routes
+- **MySQL** — relational database (migrated from Oracle)
+- **Axios** — for client-side HTTP requests
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦 Folder Structure
+```text
+bestshop/
+├── public/
+└── src/
+│   ├── assets/       # SVGs, images
+│   ├── components/   # Reusable UI components (e.g., buttons, cards)
+│   ├── contexts/     # Global state (e.g., AuthContext)
+│   ├── pages/        # Page views like Cart, Wishlist, Home
+│   └── App.js        # App entry point
+├── .gitignore
+├── README.md
+└── package.json
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🗃️ Database Overview
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+BestShop uses a **MySQL** relational database to store and manage product, shop, pricing, and user data. Here's a breakdown of the key tables:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 👤 `USER`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `USER_ID`: User ID
+- `EMAIL`, `PASSWORD_HASH`: Credentials
+- `FIRST_NAME`, `LAST_NAME`, `PHONE` : Other details...
+- Wishlist and Cart are tied to the user
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🛒 `PRODUCT`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `PRD_ID`: Product ID
+- `PRD_NAME`: Name of the product
+- `DESCRIPTION`, `BRAND`, `CREATED_AT`: Other details...
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 🏬 `SHOP`
 
-### Analyzing the Bundle Size
+- `SHP_ID`: Shop ID
+- `SHP_NAME`: Name of the shop
+- `URL`: Shop link
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### 💰 `EXIST`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `PRD_ID`, `SHP_ID`: Links a product to a shop
+- `PRICE`: Offered price
+- `URL`: Offer link
+- `STOCK`: Offer availability
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 🧬 `CARACTERISTIC`
 
-### Deployment
+- `CAR_ID`: Characteristic ID
+- `CAR_NAME`: Example: "Color", "RAM", "Screen Size"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+### 🧩 `CARACTERISED_BY`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `PRD_ID`, `CAR_ID`: Composite key linking product to a characteristic
+- `CAR_VALUE`: e.g., "16GB", "Black"
+- `CAR_UNIT`: e.g., "GB", "inch"
+
+---
+
+
+## 🔍 Smart Search Example
+
+When a user searches for a product, BestShop not only returns matching product names but also fetches:
+
+- All relevant characteristics (e.g., screen size, RAM)
+- Available values for each characteristic
+- Count of items matching each value
+
+This enables dynamic filtering (e.g., “show all 8GB RAM laptops”) and a better shopping experience.
+
+---
+
+## 🔧 Setup & Run
+
+### Requirements
+
+- Node.js
+- PHP server (e.g., XAMPP, WAMP)
+- MySQL
+
+### Steps
+
+1. Clone the repo  
+   `git clone https://github.com/yourusername/bestshop.git`
+
+2. Install frontend dependencies  
+   `npm install`
+
+3. Set up your MySQL DB and import the schema
+
+4. Update PHP backend URLs if needed
+
+5. Run the React frontend  
+   `npm start`
+
+6. Start your PHP server for API routes
+
+---
+
+## 📈 Future Improvements
+
+- 🔐 OAuth / social logins
+- 📱 Mobile responsiveness
+- 🛎️ Notifications when prices drop
+- 📦 Real-time inventory updates from shops
+
+---
+
+## 👨‍💻 Author
+
+**BestShop Team**  
+💬 Contact: [mankai.adam@gmail.com]

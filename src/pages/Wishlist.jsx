@@ -28,7 +28,7 @@ const Wishlist = () => {
                 const data = new FormData();
                 data.append('user_id', user.id);
                 const response = await axios.post('http://localhost/fetchWishlist.php', data );
-                //console.log(response.data);
+                console.log(response.data);
                 if(response.data.error){
                     console.log("Error fetching wishlist products:", response.data.message);
                 }else{
@@ -84,7 +84,7 @@ const Wishlist = () => {
                     <span>{product.WISH_DATE}</span>
                 </div>
                 <div className="wishlist-cell" style={{ width: columns[3].width ,justifyContent: columns[3].align }}>
-                    <span className="wishlist-status" style={{ backgroundColor: columns[3].options[product.STOCK] }}>{product.STOCK === '2' ? "Hors Stock" :product.STOCK === '1' ? "En Arrivage":"En Stock"}</span>
+                    <span className="wishlist-status" style={{ backgroundColor: columns[3].options[product.STOCK] }}>{product.STOCK === 2 ? "Hors Stock" :product.STOCK === 1 ? "En Arrivage":"En Stock"}</span>
                 </div>
                 <div className="wishlist-cell" style={{ width: columns[4].width ,justifyContent: columns[4].align}}>
                     <button className="wishlist-add-button" onClick={(e)=>{

@@ -28,20 +28,22 @@ function App() {
         <header className="App-header">
           <AuthProvider>
             <TopBar />
-            <div className='content'>
-            <NavBar />
-              <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/product" element={<ProductPage/>} />
-                <Route path="/login" element={<Login/>} />
-                <Route path="/signup" element={<SignUp/>} />
-                <Route path="/search" element={<Search/>} />
-                <Route path="/wishlist" element={<Wishlist/>} />
-                <Route path="/cart" element={<Cart/>} />
-              </Routes>
+            <div className="main-container">
+              <div className='content'>
+                <NavBar />
+                <Routes>
+                  <Route path="/" element={<Home/>} />
+                  <Route path="/product" element={<ProductPage/>} />
+                  <Route path="/login" element={<Login/>} />
+                  <Route path="/signup" element={<SignUp/>} />
+                  <Route path="/search" element={<Search/>} />
+                  <Route path="/wishlist" element={<Wishlist/>} />
+                  <Route path="/cart" element={<Cart/>} />
+                </Routes>
+              </div>
+              <Footer/>
             </div>
         </AuthProvider>
-        <Footer/>
         </header>
        
       </div>

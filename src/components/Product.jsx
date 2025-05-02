@@ -75,21 +75,21 @@ const Product = ({productInfo}) => {
       <div className="ProductDescription PublicSans">
         <h1>{productInfo.details.PRD_NAME}</h1>
         <div className="product-general-info">
-          <img src={productInfo.details.PRD_BRAND?`product_imgs/${productInfo.details.PRD_BRAND}.png`:'whitelabel.png'} className="product-brand-label"/>
+          <img src={productInfo.details.PRD_BRAND?`brand_logos/${productInfo.details.PRD_BRAND}.png`:'whitelabel.png'} className="product-brand-label"/>
 
           {/*<h2>{productInfo.details.PRD_BRAND}</h2>*/}
           <div className="StarContainer">
-            {generateStars(productInfo.ratings.ratingDetails.AVG_RATING)}
+            {generateStars(productInfo.ratings.ratingDetails.avg_rating)}
           </div>
-          <h4 fon>({productInfo.ratings.ratingDetails.NB_RATING} avis)</h4>
+          <h4 fon>({productInfo.ratings.ratingDetails.nb_rating} avis)</h4>
         </div>
 
         <hr className="DashedLine"/>
 
         <div className="product-availability">
           <span className="price-range">{productInfo.details.MIN_PRICE} DT</span>
-          <span className="stock" style={{ color: productInfo.details.STOCK === "0" ? "#22C55E" : productInfo.details.STOCK === "1" ? "#5c99df" : "#d84e4e"}}>
-            {productInfo.details.STOCK === "0"? "EN STOCK":productInfo.details.STOCK === "1"? "EN ARRIVAGE": "HORS STOCK"}
+          <span className="stock" style={{ color: productInfo.details.STOCK === 0 ? "#22C55E" : productInfo.details.STOCK === 1 ? "#5c99df" : "#d84e4e"}}>
+            {productInfo.details.STOCK === 0? "EN STOCK":productInfo.details.STOCK === 1? "EN ARRIVAGE": "HORS STOCK"}
           </span>
         </div>
         <div className="product-buttons">

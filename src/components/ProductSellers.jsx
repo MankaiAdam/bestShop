@@ -9,8 +9,8 @@ const Item = ({seller}) => {
           <img src={`shop_imgs/${seller.SHP_ID}.png`} alt="seller Logo" className="sellerLogo" />
           <div className="divider" />
           <h4 className="price">{seller.PRICE}DT</h4>
-          <h4 className="stock" style={{ color: seller.STOCK === "0" ? "#22C55E" : seller.STOCK === "1" ? "#5c99df" : "#d84e4e" }}>
-            {seller.STOCK === "0"? "EN STOCK": seller.STOCK === "1"? "EN ARRIVAGE": "HORS STOCK"}
+          <h4 className="stock" style={{ color: seller.STOCK === 0 ? "#22C55E" : seller.STOCK === 1 ? "#5c99df" : "#d84e4e" }}>
+            {seller.STOCK === 0? "EN STOCK": seller.STOCK === 1? "EN ARRIVAGE": "HORS STOCK"}
           </h4>
         </div>
           <a className="button PublicSans" href={seller.PRICE_URL} target="_blank">

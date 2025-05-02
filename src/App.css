@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 .App {
   text-align: center;
+  --footer-height: 262px;
 }
 
 .App-logo {
@@ -24,21 +24,39 @@
   font-size: calc(10px + 2vmin);
   font-family: 'Poppins', sans-serif;
   color: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.content{
+.main-container{
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
   margin-top: 56px;
   width: 100%;
- /* height: calc(100vh - 105px); creates footer problem*/ 
+  min-height: calc(100vh - 56px);
   background-color: #FAFAFA;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.content{
+  position: relative;
+  display: flex;
+  /*flex: 1;*/
+  padding-top: var(--navbar-height);
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 56px);
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+  overflow:hidden;
 }
 
 @keyframes App-logo-spin {

@@ -9,7 +9,7 @@ import './Search.css';
 
 const useQuery = () => {
     return new URLSearchParams(useLocation().search);
-  };
+};
   
 const Search = () => {
     const query = useQuery().get("query");

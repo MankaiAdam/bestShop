@@ -139,7 +139,7 @@ const Cart = () => {
                     </a>
                 </div>
                 <div className="cart-cell" style={{ width: columns[4].width ,justifyContent: columns[4].align }}>
-                    <span className="cart-status" style={{ backgroundColor: columns[4].options[product.STOCK] }}>{product.STOCK === '2' ? "Hors Stock" :product.STOCK === '1' ? "En Arrivage":"En Stock"}</span>
+                    <span className="cart-status" style={{ backgroundColor: columns[4].options[product.STOCK] }}>{product.STOCK === 2 ? "Hors Stock" :product.STOCK === 1 ? "En Arrivage":"En Stock"}</span>
                 </div>
                 <div className="cart-cell" style={{ width: columns[5].width ,justifyContent: columns[5].align}}>
                     <button className="cart-delete-button" >
@@ -181,7 +181,7 @@ const Cart = () => {
                         {
                         !loading?
                         cart.length? cart.map((item) => renderRow(item))
-                        :user? <div className="cart-empty">Aucun produit dans la liste de souhaits.</div>
+                        :user? <div className="cart-empty">Aucun produit dans votre panier.</div>
                         : <div className="cart-empty">Veuillez vous connecter pour voir vos produits.</div>
                         : <div className="cart-empty">Loading...</div>
                         }

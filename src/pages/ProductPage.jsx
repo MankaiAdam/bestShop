@@ -18,9 +18,9 @@ const ProductPage = () => {
     useEffect(() => {
         const fetchResults = async () => {
             try {
-                const response = await axios.get('http://localhost/product2.php', { params: { query } });
+                const response = await axios.get('http://localhost/product.php', { params: { query } });
 
-                //console.log(response);
+                console.log(response);
                 if (response.data.error) {
                     console.log(response.data.error);
                     setResults([]);

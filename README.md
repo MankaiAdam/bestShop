@@ -125,7 +125,7 @@ This enables dynamic filtering (e.g., “show all 8GB RAM laptops”) and a bett
 ### Steps
 
 1. Clone the repo  
-   `git clone https://github.com/yourusername/bestshop.git`
+   `git clone https://github.com/MankaiAdam/bestshop.git`
 
 2. Install frontend dependencies  
    `npm install`

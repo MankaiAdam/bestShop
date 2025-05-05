@@ -63,7 +63,7 @@
 }
 
 .seller a{
-    width: 60%;
+    width: 55%;
     height: 32px;
     margin: 8px 0 15px 0;
     text-decoration: none;
@@ -82,8 +82,12 @@
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.1s ease;
+    font-size: 14px;
 }
-
+.seller button span{
+    padding-right: 6px;
+    font-size: 25px;
+}
 .seller button:hover{
     background-color: rgb(34, 192, 76);
 }

@@ -3,6 +3,7 @@ import { Carousel } from '../components/Carousel';
 import { ProductCard } from '../components/ProductCard';
 import { ReactComponent as Arrow } from '../assets/svg/arrow.svg';
 import slides from "../assets/json/CarouselSlides.json";
+import smartphones from "../assets/json/Smartphones.json";
 import promos from "../assets/json/Promos.json";
 import './Home.css';
 
@@ -49,7 +50,34 @@ const Home = () => {
         <div className="Home">
             <Carousel data={slides.slides}/>
             <br/>
-            <div className="promo-section">
+            <div className="preview-section">
+                <h1>Nos Smartphones</h1>
+                <div
+                    className="promo-cards-container"
+                    ref={containerRef}
+                    onMouseDown={handleMouseDown}
+                    onMouseLeave={handleMouseLeave}
+                    onMouseUp={handleMouseUp}
+                    onMouseMove={handleMouseMove}
+                >
+                    {smartphones.Smartphones.map((SF, index) => {
+                        return <ProductCard key={index} data={SF}/>
+                    })}
+                    <button
+                        className='cards-container-arrow cards-container-left-arrow'
+                        onClick={() => ArrowClick(0)}
+                    >
+                        <Arrow className="arrow-icon"/>
+                    </button>
+                    <button
+                        className='cards-container-arrow cards-container-right-arrow'
+                        onClick={() => ArrowClick(1)}
+                    >
+                        <Arrow className="arrow-icon"/>
+                    </button>
+                </div>
+            </div>
+            {/*<div className="preview-section">
                 <h1>Promos Flash</h1>
                 <div
                     className="promo-cards-container"
@@ -75,8 +103,8 @@ const Home = () => {
                         <Arrow className="arrow-icon"/>
                     </button>
                 </div>
-            </div>
-            
+            </div>*/}
+            <br/>
         </div>
     );
 };

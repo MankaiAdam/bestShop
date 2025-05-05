@@ -85,11 +85,17 @@ const SignUp = () => {
                                 onChange={(e) => setPhone(e.target.value)}/>
                         </div>
                         <span>
-                            <input className='signup-conditon' type='checkbox' required/>
+                            <label className="container">
+                                <input type="checkbox" required/>
+                                <span className="checkmark"></span>
+                            </label>
                             J'accepte&nbsp;<a href="/login">les conditions générales d'utilisation</a>
                         </span>
                         <span>
-                            <input className='signup-conditon' type='checkbox'/>
+                            <label className="container">
+                                <input type="checkbox"/>
+                                <span className="checkmark"></span>
+                            </label>
                             Je souhaite recevoir la newsletter de BestShop ainsi que des notifications sur les promotions et les baisses de prix des articles.
                         </span>
                         <input type='submit' value="S'inscrire"/>

@@ -67,7 +67,14 @@ const RatingSection = ({results}) => {
 
     const generateReviews = (Reviews) => {
         let reviews = [];
+        
         for (let i = 0; i < Reviews.length; i++) {
+            const dateStr = Reviews[i].RATE_DATE;
+            const formattedDate = new Date(dateStr).toLocaleDateString("fr-FR", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+            });
             reviews.push(
                 <div className="review">
                     <span className="review-writer">{Reviews[i].USR_FIRST} {Reviews[i].USR_LAST}</span>
@@ -75,7 +82,7 @@ const RatingSection = ({results}) => {
                         <span className="review-stars">
                             {generateStars1(Reviews[i].RATING)}
                         </span>
-                        <span className="review-date">june ,5 ,2025</span>
+                        <span className="review-date">{formattedDate}</span>
                     </div>
                     <p className="review-body">{Reviews[i].COMMENT}</p>
                 </div>
@@ -126,8 +133,8 @@ const RatingSection = ({results}) => {
                     <span className="rating-general-info-title">Avis&Evaluations</span>
                     <div className="rating-general-info">
                         <div className="global-rating">
-                            <span className="global-rating-value">{parseFloat(results.ratings.ratingDetails.AVG_RATING).toFixed(1)}</span>
-                            <span className="global-rating-nb" onClick={() => searchReviews(null)}>{results.ratings.ratingDetails.NB_RATING} avis</span>
+                            <span className="global-rating-value">{parseFloat(results.ratings.ratingDetails.avg_rating).toFixed(1)}</span>
+                            <span className="global-rating-nb" onClick={() => searchReviews(null)}>{results.ratings.ratingDetails.nb_rating} avis</span>
                         </div>
                         <div className="rating-distribution">
                             {destributionItems(results.ratings.ratingCounts)}

@@ -14,7 +14,7 @@ const Item = ({seller}) => {
           </h4>
         </div>
           <a className="button PublicSans" href={seller.PRICE_URL} target="_blank">
-            <button >Voir l'offre</button>
+            <button ><span>+</span> Panier</button>
           </a>
       </div>
     </>

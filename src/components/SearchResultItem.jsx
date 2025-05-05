@@ -21,7 +21,7 @@ const SearchResultItem = ({product}) => {
           <button className="add-to-cart-btn"><span>+</span>Ajouter au panier</button>
           <button className="wishlist-btn"><Heart className='wishlist-heart' stroke="#fff" />Wishlist</button>
         </div>
-        <p className="search-item-availability">{product.STOCK === "0"? "EN STOCK":product.STOCK === "1"? "EN ARRIVAGE": "HORS STOCK"}</p>
+        <p className="search-item-availability">{product.STOCK === 0? "EN STOCK":product.STOCK === 1? "EN ARRIVAGE": "HORS STOCK"}</p>
       </div>
     </div>
   );

@@ -1,43 +1,43 @@
 {
     "PromoProducts": [
         {
-            "src": "./img1.png",
+            "src": "preview_images/img1.png",
             "title" : "Samsung Galaxy Tab A9+ Tablet 11” 64GB",
             "old_price" : 759,
             "price" : 599
         },
         {
-            "src": "./img2.png",
+            "src": "preview_images/img2.png",
             "title" : "LEVOIT Air Purifiers for Bedroom Home, 3-in-1",
             "old_price" : 230,
             "price" : 140
         },
         {
-            "src": "./img3.png",
+            "src": "preview_images/img3.png",
             "title" : "43\" Smart LED-LCD TV - 4K UHDTV HBU8000 - Black",
             "old_price" : 2899,
             "price" : 2299
         },
         {
-            "src": "./img4.png",
+            "src": "preview_images/img4.png",
             "title" : "Majestic Pure Lavender Essential Oil 118ml",
             "old_price" : 48,
             "price" : 35
         },
         {
-            "src": "./img5.png",
+            "src": "preview_images/img5.png",
             "title" : "medicube Collagen Overnight Wrapping Peel Off Facial Mask",
             "old_price" : 79,
             "price" : 60
         },
         {
-            "src": "./img5.png",
+            "src": "preview_images/img5.png",
             "title" : "medicube Collagen Overnight Wrapping Peel Off Facial Mask",
             "old_price" : 79,
             "price" : 60
         },
         {
-            "src": "./img5.png",
+            "src": "preview_images/img5.png",
             "title" : "medicube Collagen Overnight Wrapping Peel Off Facial Mask",
             "old_price" : 79,
             "price" : 60

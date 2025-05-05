@@ -5,7 +5,7 @@ import './ProductCard.css'
 const images = require.context('../assets/', false, /\.(png|jpe?g|svg)$/);
 
 export const ProductCard = ({data}) => {
-  const imageSrc = images(`${data.src}`);
+  const imageSrc = data.src;
   return (
     <div className='card'>
         <div className='card-image-background'>
@@ -18,7 +18,7 @@ export const ProductCard = ({data}) => {
         <p className='card-title'>{data.title}</p>
         <span className='card-price-container'>
             <p className='card-price'>{data.price}DT</p>
-            <p className='card-old-price'>{data.old_price}DT</p>
+            <p className='card-old-price'>{data.old_price?data.old_price+'DT':''}</p>
         </span>
     </div>
   )

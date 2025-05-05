@@ -57,6 +57,7 @@ const ProductPage = () => {
             <Product productInfo={results}/>
             <ProductSellers results={results}/>
             <ProductExtras results={results}/>
+            <br></br>
         </>
     );
 };

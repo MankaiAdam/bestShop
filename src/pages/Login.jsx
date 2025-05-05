@@ -76,7 +76,14 @@ const SignUp = () => {
                                     <img src={showPassword ? EyeShow : EyeHide} alt="eye" className='eye-icon'/>
                                 </label>
                             </div>
-                            <span><input type='checkbox'/>Se souvenir de moi</span>
+                           
+                            <span>
+                            <label className="container">
+                                <input type="checkbox"/>
+                                <span className="checkmark"></span>
+                            </label>
+                            Se souvenir de moi
+                            </span>
                         </div>
                         <input type='submit' value="Se connecter"/>
                     </form>

@@ -1,20 +1,16 @@
 {
     "slides": [
         {
-            "src": "https://picsum.photos/seed/img1/1400/600",
+            "src": "/carousel_images/carousel1.jpg",
             "alt": "Slide 1 description"
         },
         {
-            "src": "https://picsum.photos/seed/img2/1400/600",
+            "src": "/carousel_images/carousel2.jpg",
             "alt": "Slide 2 description"
         },
         {
-            "src": "https://picsum.photos/seed/img3/1400/600",
+            "src": "/carousel_images/carousel3.jpg",
             "alt": "Slide 3 description"
-        },
-        {
-            "src": "https://picsum.photos/seed/img4/1400/600",
-            "alt": "Slide 4 description"
         }
     ]
 }

@@ -1,0 +1,35 @@
+{
+    "Smartphones": [
+        {
+            "src": "preview_images/SF6.png",
+            "title" : "Galaxy S25 Ultra 256 Go - Noir",
+            "price" : 5999
+        },
+        {
+            "src": "preview_images/SF5.png",
+            "title" : "iPhone 16 Pro Max 256GB – Desert Titanium",
+            "old_price" : 4299,
+            "price" : 3849
+        },
+        {
+            "src": "preview_images/SF4.png",
+            "title" : "Samsung A25 – Smartphone 5G (8+256Go) Noir",
+            "price" : 1349
+        },
+        {
+            "src": "preview_images/SF2.png",
+            "title" : "Infinix Hot 40 FF – Smartphone 8+256Go Noir",
+            "price" : 599
+        },
+        {
+            "src": "preview_images/SF3.png",
+            "title" : "Redmi Note 14 – Smartphone Xiaomi (6-128Go) Noir",
+            "price" : 699
+        },
+        {
+            "src": "preview_images/SF1.png",
+            "title" : "Infinix Hot 50i – Smartphone (6+128Go) Noir",
+            "price" : 399
+        }
+    ]
+}

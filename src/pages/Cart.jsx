@@ -4,6 +4,7 @@ import { AuthContext } from '../contexts/AuthContext';
 import axios from 'axios';
 
 import {ReactComponent as Heart} from '../assets/svg/heart.svg';
+import cartIcon from "../assets/cart.png";
 import deleteIcon from "../assets/svg/delete-icon.svg";
 
 import "./Cart.css";
@@ -162,7 +163,7 @@ const Cart = () => {
                     <span className='breadcrumb'>Panier</span>
                 </div>
                 <div className="cart-icon">
-                    <Heart stroke={"#000"}/>
+                    <img src= {cartIcon} alt="" className="cart-image"/>
                 </div>
                 <h2>Panier</h2>
                 <div className="cart">

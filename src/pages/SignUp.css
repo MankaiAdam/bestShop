@@ -2,14 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: calc(100vh - 100px);
     width: 100%;
     box-sizing: border-box;
 }
 
 .form-container{    
     font-family: 'Poppins';
-    width: 35%;
+    width: 651px;
     background-color: white;
     border-radius: 20px;
     padding: 0px 50px 30px 50px;
@@ -140,4 +140,7 @@
     color: #999999;
     font-size: 15px;
     font-family: "Poppins";
+}
+.form-container span .container{
+    margin-top: 11px;
 }
